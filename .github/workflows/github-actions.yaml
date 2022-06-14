@@ -22,6 +22,7 @@ jobs:
       - name: List files in the repository
         run: ls ${{ github.workspace }}
       - run: cd ${{ github.workspace }}
+      - run: terraform init
       - run: terraform plan -var="my_access_key=${{secrets.MY_ACCESS_KEY}}" -var="my_secret_key=${{secrets.MY_SECRET_KEY}}"
 
       
