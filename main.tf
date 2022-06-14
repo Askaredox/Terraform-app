@@ -14,13 +14,13 @@ provider "aws" {
   secret_key = var.my_secret_key
 }
 
-resource "aws_instance" "SA-TP5" {
+resource "aws_instance" "SA-Presentacion" {
   ami                    = "ami-0fb653ca2d3203ac1"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
   tags = {
-    Name = "TareaPractica5-SoftwareAvanzado"
+    Name = "Presentacion-SoftwareAvanzado"
   }
 
 
@@ -29,7 +29,7 @@ resource "aws_instance" "SA-TP5" {
 }
 
 resource "aws_security_group" "instance" {
-  name = "SA-TP5-security-group"
+  name = "SA-Presentacion-security-group"
 
   ingress {
     from_port   = 3000
