@@ -25,6 +25,7 @@ jobs:
         run: ls ${{ github.workspace }}
       - run: cd ${{ github.workspace }}
       - run: terraform init
+      - run: terraform destroy
       - run: terraform plan -var="my_access_key=${{secrets.MY_ACCESS_KEY}}" -var="my_secret_key=${{secrets.MY_SECRET_KEY}}"
       - run: terraform apply -var="my_access_key=${{secrets.MY_ACCESS_KEY}}" -var="my_secret_key=${{secrets.MY_SECRET_KEY}}" -auto-approve
 
