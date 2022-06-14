@@ -13,7 +13,6 @@ sudo apt update -y
 sudo apt install -y git
 
 
-git clone https://gitlab.com/Askaredox/sa_tareaspracticas_201612272.git
-cd /sa_tareaspracticas_201612272
-sudo git checkout feature/tp_5
+git clone https://github.com/Askaredox/Terraform-app.git
+cd /Terraform-app
 sudo docker-compose -f "docker-compose.yaml" up -d --build
